@@ -4,19 +4,22 @@ public class Task {
     Integer priority;
     Person responsiblePerson;
 
-    Task(String name, String description) {
+    public Task(String name, String description, Integer priority, Person responsiblePerson) {
         this.name = name;
         this.description = description;
+        this.priority = priority;
+        this.responsiblePerson = responsiblePerson;
     }
 
-    Task(String name, String description, Integer priority) {
-        this(name, description);
+    public Task(String name, String description, Integer priority) {
+        this.name = name;
+        this.description = description;
         this.priority = priority;
     }
 
-    Task(String name, String description, Integer priority, Person responsiblePerson) {
-        this(name, description, priority);
-        this.responsiblePerson = responsiblePerson;
+    public Task(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     boolean highPriority() {
